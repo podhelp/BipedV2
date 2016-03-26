@@ -1,0 +1,22 @@
+//- variables
+- var pageTitle = "Sona"
+- var homePage = "Home"
+- var aboutPage = "About"
+- var portfolioPage = "Creative"
+
+//- html
+doctype html
+html
+  head
+    title= pageTitle
+    link(href='css/styles.css', rel='stylesheet')
+  body
+    .nav
+      .logo-container
+        img.logo(src='images/logo.svg')
+      .links
+        a(href="#")= homePage
+        a(href="#")= aboutPage
+        a(href="#")= portfolioPage
+    .jumbotron
+        p.greeting Helsdo, World!

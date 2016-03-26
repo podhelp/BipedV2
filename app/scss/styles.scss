@@ -1,0 +1,93 @@
+/* styles.scss */
+
+#__bs_notify__ {
+  background: rgba(0,0,0,.4) !important;
+  left:0px;
+  top: 50% !important;
+}
+
+/*  ======== Google Fonts ==========
+    ======================== */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,300);
+
+// ======== Variables ==========
+$white: #fff;
+$black:#000;
+
+$primary-color: green;
+$background-color: $white;
+
+$font-stack: 'Raleway', sans-serif;
+
+// ======== Mixins ==========
+@mixin left-right-padding($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin subtle-shadow {
+  box-shadow: 0px 4px 12px 4px rgba(0, 0, 0, 0.4);
+}
+
+/*  ======== Body ==========
+    ======================== */
+
+body,html {
+  margin:0px;
+  width:100%;
+  height:100%;
+}
+
+body {
+  background:$background-color;
+}
+
+.nav {
+  background:$background-color;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:50px;
+  z-index: 8;
+  @include subtle-shadow;
+  .logo-container {
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    @include left-right-padding(10px);
+    img {
+      height:50%;
+    }
+  }
+  .links {
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+    height:100%;
+    a {
+      color:$black;
+      font-family: $font-stack;
+      list-style: none;
+      display:flex;
+      align-items: center;
+      @include left-right-padding(10px);
+      height:100%;
+      text-decoration: none;
+      &:hover {
+        color:red;
+      }
+    }
+  }
+}
+
+.jumbotron {
+  width: 100%;
+  height:40%;
+  background: blue;
+  padding: 20px;
+  p {
+    margin-top: 0px;
+  }
+}
