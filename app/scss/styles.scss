@@ -88,7 +88,9 @@ body,html {
       width:20%;
       height:1px;
       background-color:$black;
-      margin: auto
+      margin: auto;
+      margin-top:20px;
+      margin-bottom:20px;
     }
     h1 {
       margin-top:0px;
@@ -129,7 +131,6 @@ body,html {
         font-size: 14px;
         width:60%;
         margin: auto;
-        padding-top:20px
       }
     }
     .link {
