@@ -3,15 +3,16 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 #__bs_notify__ {
   background: rgba(0, 0, 0, 0.4) !important;
-  left: 0px;
+  left: 0;
   top: 50% !important; }
 
 /*  ======== Google Fonts ==========
     ======================== */
 /*  ======== Body ==========
     ======================== */
-body, html {
-  margin: 0px;
+body,
+html {
+  margin: 0;
   width: 100%;
   height: 100%;
   background: #fff;
@@ -19,7 +20,7 @@ body, html {
 
 .nav {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   height: 40px;
   -webkit-align-items: center;
@@ -73,20 +74,19 @@ body, html {
       width: 20%;
       height: 1px;
       background-color: #252933;
-      margin: auto;
-      margin-top: 20px;
-      margin-bottom: 20px; }
+      margin: 20px auto; }
     .content .text h1 {
-      margin-top: 0px;
+      margin-top: 0;
       font-size: 4.5vw;
       font-weight: lighter;
       color: #252933;
-      letter-spacing: .07em; }
+      letter-spacing: 0.07em; }
     .content .text p {
       font-family: "Montserrat", sans-serif;
       font-size: 3vw;
       color: #a0aac3; }
-  .content .link, .content .pad {
+  .content .link,
+  .content .pad {
     height: 30%;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -96,10 +96,12 @@ body, html {
             align-items: center;
     color: #fa003c;
     font-size: 4vw; }
-    .content .link a, .content .pad a {
+    .content .link a,
+    .content .pad a {
       text-decoration: none;
       color: #fa003c; }
-      .content .link a:hover, .content .pad a:hover {
+      .content .link a:hover,
+      .content .pad a:hover {
         color: #c80050; }
 
 @media (min-width: 700px) {

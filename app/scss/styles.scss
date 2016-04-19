@@ -1,140 +1,128 @@
 /* styles.scss */
-
 // move browsersync
 #__bs_notify__ {
-  background: rgba(0,0,0,.4) !important;
-  left:0px;
-  top: 50% !important;
+    background: rgba(0,0,0,.4) !important;
+    left: 0;
+    top: 50% !important;
 }
-
 /*  ======== Google Fonts ==========
     ======================== */
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
-
 // ======== Variables ==========
 $white: #fff;
-$black:#252933;
+$black: #252933;
 $red: #fa003c;
 $ruby: #c80050;
 $sky: #a0aac3;
 $thunder: #737373;
 $night: #2d3c50;
-
 $backgroundColor: $white;
 $highlightColor: $red;
-
 $sans-serif: 'Montserrat', sans-serif;
 $serif: 'Playfair Display', serif;
-
 // ======== Mixins ==========
-
-
 /*  ======== Body ==========
     ======================== */
-
-body,html {
-  margin:0px;
-  width:100%;
-  height:100%;
-  background:$backgroundColor;
-  font-family: $sans-serif;
+body,
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: $backgroundColor;
+    font-family: $sans-serif;
 }
-
 .nav {
-  position: absolute;
-  bottom: 0px;
-  width:100%;
-  height: 40px;
-  align-items: center;
-  display: flex;
-  background-color:$white;
-  border-top: 1px solid $thunder;
-  .links {
-  display: flex;
-  justify-content: space-around;
-  max-width: 600px;
-  width: 90%;
-  margin: auto;
-  a {
-    text-decoration: none;
-    color: $thunder;
-    font-size: 11px;
-    &:hover {
-      color: $highlightColor;
-    }
-  }
- }
-}
-
-.content {
-  width:90%;
-  margin: auto;
-  height: -webkit-calc(100% - 40px);
-  height:    -moz-calc(100% - 40px);
-  height:         calc(100% - 40px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  .image {
-    width:50%;
-    max-width: 400px;
-  }
-  .text {
-    font-family: $serif;
-    text-align: center;
-    .rule {
-      width:20%;
-      height:1px;
-      background-color:$black;
-      margin: auto;
-      margin-top:20px;
-      margin-bottom:20px;
-    }
-    h1 {
-      margin-top:0px;
-      font-size: 4.5vw;
-      font-weight: lighter;
-      color: $black;
-      letter-spacing: .07em;
-    }
-    p {
-      font-family: $sans-serif;
-      font-size: 3vw;
-      color: $sky;
-    }
-  }
-  .link, .pad {
-    height:30%;
-    display:flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
     align-items: center;
-    color: $red;
-    font-size: 4vw;
-    a {
-      text-decoration: none;
-      color: $red;
-      &:hover {
-        color: $ruby;
-      }
-    }
-  }
-}
-
-@media (min-width: 700px) {
-  .content {
-    .text {
-      h1 {
-        font-size: 25px;
-      }
-      p {
-        font-size: 14px;
-        width:60%;
+    display: flex;
+    background-color: $white;
+    border-top: 1px solid $thunder;
+    .links {
+        display: flex;
+        justify-content: space-around;
+        max-width: 600px;
+        width: 90%;
         margin: auto;
-      }
+        a {
+            text-decoration: none;
+            color: $thunder;
+            font-size: 11px;
+            &:hover {
+                color: $highlightColor;
+            }
+        }
     }
-    .link {
-      font-size: 20px;
+}
+.content {
+    width: 90%;
+    margin: auto;
+    height: -webkit-calc(100% - 40px);
+    height: -moz-calc(100% - 40px);
+    height: calc(100% - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .image {
+        width: 50%;
+        max-width: 400px;
     }
-  }
+    .text {
+        font-family: $serif;
+        text-align: center;
+        .rule {
+            width: 20%;
+            height: 1px;
+            background-color: $black;
+            margin: 20px auto;
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 4.5vw;
+            font-weight: lighter;
+            color: $black;
+            letter-spacing: 0.07em;
+        }
+        p {
+            font-family: $sans-serif;
+            font-size: 3vw;
+            color: $sky;
+        }
+    }
+    .link,
+    .pad {
+        height: 30%;
+        display: flex;
+        align-items: center;
+        color: $red;
+        font-size: 4vw;
+        a {
+            text-decoration: none;
+            color: $red;
+            &:hover {
+                color: $ruby;
+            }
+        }
+    }
+}
+@media (min-width: 700px) {
+    .content {
+        .text {
+            h1 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 14px;
+                width: 60%;
+                margin: auto;
+            }
+        }
+        .link {
+            font-size: 20px;
+        }
+    }
 }
