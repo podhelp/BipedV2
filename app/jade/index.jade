@@ -1,9 +1,20 @@
 //- variables
-- var pageTitle = "Sona"
+- var mainTitle = "Sona"
+- var pageTitle = mainTitle + " Agency"
+
 - var pageOne = "About"
+- var pageOneLink ="about.html"
+
 - var pageTwo = "Podcasts"
+- var pageTwoLink = "podcasts.html"
+
 - var pageThree = "Advertisers"
+- var pageThreeLink = "advertisers.html"
+
 - var pageFour = "Contact"
+- var pageFourLink = "contact.html"
+
+
 - var logo = "images/logo.svg"
 
 //- html
@@ -22,15 +33,15 @@ html
 			.text
 				h1 Whisper in their ear.
 				.rule
-				p Sona Agency hand-crafts podcast marketing campaigns, creating the most intimate user connection. 
+				p Sona Agency handcrafts podcast marketing campaigns, creating the most intimate user connection. 
 			.link
 				a(href="index.html") Learn More
 		.nav
 			.links
-				a(href="index.html")= pageOne
-				a(href="index.html")= pageTwo
-				a(href="index.html")= pageThree
-				a(href="index.html")= pageFour
+				a(href=pageOneLink)= pageOne
+				a(href=pageTwoLink)= pageTwo
+				a(href=pageThreeLink)= pageThree
+				a(href=pageFourLink)= pageFour
 		//build:js js/main.min.js
 		//script(src='js/main.js')
 		//script(src='js/plugin.js')

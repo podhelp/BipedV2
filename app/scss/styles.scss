@@ -5,10 +5,10 @@
     left: 0;
     top: 50% !important;
 }
-/*  ======== Fonts ==========
-    ======================== */
+/*  ==================== Fonts ======================
+    ================================================= */
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 @font-face {
     font-family: 'montserratbold';
     src: url('/fonts/montserrat-bold-webfont.eot');
@@ -23,7 +23,12 @@
     font-weight: normal;
     font-style: normal;
 }
-// ======== Variables ==========
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+/*  ==================== Variables ======================
+    ================================================= */
+
+// ======== Colors ==========
 $white: #fff;
 $black: #252933;
 $red: #fa003c;
@@ -33,11 +38,17 @@ $thunder: #737373;
 $night: #2d3c50;
 $backgroundColor: $white;
 $highlightColor: $red;
+
+// ======== Fonts ==========
 $sans-serif-light: 'montserratlight', sans-serif;
 $sans-serif: 'Montserrat', sans-serif;
-$serif: 'Playfair Display', serif; // ======== Mixins ==========
-/*  ======== Body ==========
-    ======================== */
+$serif: 'Playfair Display', serif;
+
+/*  ==================== Mixins ======================
+    ================================================= */
+
+/*  ==================== Styling ======================
+    ================================================= */
 body,
 html {
     margin: 0;
@@ -125,6 +136,9 @@ html {
         }
     }
 }
+
+/*  ==================== Media Queries ======================
+    ================================================= */
 @media (min-width: 700px) {
     .content {
         .text {
