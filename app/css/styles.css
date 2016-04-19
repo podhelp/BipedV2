@@ -1,5 +1,6 @@
 /* styles.scss */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 #__bs_notify__ {
   background: rgba(0, 0, 0, 0.4) !important;
   left: 0px;
@@ -12,71 +13,100 @@
 body, html {
   margin: 0px;
   width: 100%;
-  height: 100%; }
-
-body {
-  background: #fff; }
+  height: 100%;
+  background: #fff;
+  font-family: "Montserrat", sans-serif; }
 
 .nav {
-  background: #fff;
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50px;
-  z-index: 8;
-  box-shadow: 0px 4px 12px 4px rgba(0, 0, 0, 0.4); }
-  .nav .logo-container {
-    height: 100%;
-    background: white;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-left: 10px;
-    padding-right: 10px; }
-    .nav .logo-container img {
-      height: 50%; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  border-top: 1px solid #737373; }
   .nav .links {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-align-content: space-around;
-        -ms-flex-line-pack: distribute;
-            align-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    max-width: 600px;
+    width: 90%;
+    margin: auto; }
+    .nav .links a {
+      text-decoration: none;
+      color: #737373;
+      font-size: 11px; }
+      .nav .links a:hover {
+        color: #fa003c; }
+
+.content {
+  width: 90%;
+  margin: auto;
+  height: calc(100% - 40px);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .content .image {
+    width: 50%;
+    max-width: 400px; }
+  .content .text {
+    font-family: "Playfair Display", serif;
+    text-align: center; }
+    .content .text .rule {
+      width: 20%;
+      height: 1px;
+      background-color: #252933;
+      margin: auto; }
+    .content .text h1 {
+      margin-top: 0px;
+      font-size: 4.5vw;
+      font-weight: lighter;
+      color: #252933;
+      letter-spacing: .07em; }
+    .content .text p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 3vw;
+      color: #a0aac3; }
+  .content .link, .content .pad {
+    height: 30%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%; }
-    .nav .links a {
-      color: #000;
-      font-family: "Raleway", sans-serif;
-      list-style: none;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding-left: 10px;
-      padding-right: 10px;
-      height: 100%;
-      text-decoration: none; }
-      .nav .links a:hover {
-        color: red; }
+    color: #fa003c;
+    font-size: 4vw; }
+    .content .link a, .content .pad a {
+      text-decoration: none;
+      color: #fa003c; }
+      .content .link a:hover, .content .pad a:hover {
+        color: #c80050; }
 
-.jumbotron {
-  width: 100%;
-  height: 40%;
-  background: blue;
-  padding: 20px; }
-  .jumbotron p {
-    margin-top: 0px; }
+@media (min-width: 700px) {
+  .content .text h1 {
+    font-size: 25px; }
+  .content .text p {
+    font-size: 14px;
+    width: 60%;
+    margin: auto;
+    padding-top: 20px; }
+  .content .link {
+    font-size: 20px; } }

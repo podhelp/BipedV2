@@ -1,5 +1,6 @@
 /* styles.scss */
 
+// move browsersync
 #__bs_notify__ {
   background: rgba(0,0,0,.4) !important;
   left:0px;
@@ -8,26 +9,26 @@
 
 /*  ======== Google Fonts ==========
     ======================== */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 
 // ======== Variables ==========
 $white: #fff;
-$black:#000;
+$black:#252933;
+$red: #fa003c;
+$ruby: #c80050;
+$sky: #a0aac3;
+$thunder: #737373;
+$night: #2d3c50;
 
-$primary-color: green;
-$background-color: $white;
+$backgroundColor: $white;
+$highlightColor: $red;
 
-$font-stack: 'Raleway', sans-serif;
+$sans-serif: 'Montserrat', sans-serif;
+$serif: 'Playfair Display', serif;
 
 // ======== Mixins ==========
-@mixin left-right-padding($padding) {
-  padding-left: $padding;
-  padding-right: $padding;
-}
 
-@mixin subtle-shadow {
-  box-shadow: 0px 4px 12px 4px rgba(0, 0, 0, 0.4);
-}
 
 /*  ======== Body ==========
     ======================== */
@@ -36,58 +37,103 @@ body,html {
   margin:0px;
   width:100%;
   height:100%;
-}
-
-body {
-  background:$background-color;
+  background:$backgroundColor;
+  font-family: $sans-serif;
 }
 
 .nav {
-  background:$background-color;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  width:100%;
+  height: 40px;
   align-items: center;
-  height:50px;
-  z-index: 8;
-  @include subtle-shadow;
-  .logo-container {
-    height: 100%;
-    background: white;
-    display: flex;
-    align-items: center;
-    @include left-right-padding(10px);
-    img {
-      height:50%;
+  display: flex;
+  background-color:$white;
+  border-top: 1px solid $thunder;
+  .links {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  a {
+    text-decoration: none;
+    color: $thunder;
+    font-size: 11px;
+    &:hover {
+      color: $highlightColor;
     }
   }
-  .links {
-    display: flex;
-    align-content: space-around;
+ }
+}
+
+.content {
+  width:90%;
+  margin: auto;
+  height: -webkit-calc(100% - 40px);
+  height:    -moz-calc(100% - 40px);
+  height:         calc(100% - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .image {
+    width:50%;
+    max-width: 400px;
+  }
+  .text {
+    font-family: $serif;
+    text-align: center;
+    .rule {
+      width:20%;
+      height:1px;
+      background-color:$black;
+      margin: auto
+    }
+    h1 {
+      margin-top:0px;
+      font-size: 4.5vw;
+      font-weight: lighter;
+      color: $black;
+      letter-spacing: .07em;
+    }
+    p {
+      font-family: $sans-serif;
+      font-size: 3vw;
+      color: $sky;
+    }
+  }
+  .link, .pad {
+    height:30%;
+    display:flex;
     align-items: center;
-    height:100%;
+    color: $red;
+    font-size: 4vw;
     a {
-      color:$black;
-      font-family: $font-stack;
-      list-style: none;
-      display:flex;
-      align-items: center;
-      @include left-right-padding(10px);
-      height:100%;
       text-decoration: none;
+      color: $red;
       &:hover {
-        color:red;
+        color: $ruby;
       }
     }
   }
 }
 
-.jumbotron {
-  width: 100%;
-  height:40%;
-  background: blue;
-  padding: 20px;
-  p {
-    margin-top: 0px;
+@media (min-width: 700px) {
+  .content {
+    .text {
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 14px;
+        width:60%;
+        margin: auto;
+        padding-top:20px
+      }
+    }
+    .link {
+      font-size: 20px;
+    }
   }
 }

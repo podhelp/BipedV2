@@ -1,22 +1,38 @@
 //- variables
 - var pageTitle = "Sona"
-- var homePage = "Home"
-- var aboutPage = "About"
-- var portfolioPage = "Creative"
+- var pageOne = "About"
+- var pageTwo = "Podcasts"
+- var pageThree = "Advertisers"
+- var pageFour = "Contact"
+- var logo = "images/logo.svg"
 
 //- html
 doctype html
 html
   head
     title= pageTitle
+    //build:css css/styles.min.css
     link(href='css/styles.css', rel='stylesheet')
+    // endbuild 
   body
+    .content
+      .pad
+      .image
+        img(src=logo) 
+      .text
+        h1 Whisper in their ear.
+        .rule
+        p Sona Agency hand-crafts podcast marketing campaigns, creating the most intimate user connection. 
+      .link
+        a(href="index.html") Learn More
     .nav
-      .logo-container
-        img.logo(src='images/logo.svg')
       .links
-        a(href="#")= homePage
-        a(href="#")= aboutPage
-        a(href="#")= portfolioPage
-    .jumbotron
-        p.greeting Helsdo, World!
+        a(href="index.html")= pageOne
+        a(href="index.html")= pageTwo
+        a(href="index.html")= pageThree
+        a(href="index.html")= pageFour
+    //build:js js/main.min.js
+    //script(src='js/main.js')
+    //script(src='js/plugin.js')
+    //script(src='js/vendor/modernizer-2.8.min.js')
+    // endbuild 
